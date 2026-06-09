@@ -1,0 +1,110 @@
+/* Color Palette Reference: 
+   Dark: #040100 (Charcoal)
+   Accents: #703B1D, #CA7926 (Gold), #B35403, #371604 (Deep Burgundy/Earth)
+*/
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  min-height: 100vh;       /* Makes the body the full height of the tab */
+  background-color: #f0f0f0; /* Optional: adds a background color to the page */
+}
+
+.magazine-cover {
+  position: relative;
+  width: 450px; /* Slightly wider for a standard magazine ratio */
+  height: 600px;
+  background-color: #040100; /* Ensuring dark base */
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+/* Background Image - Deep contrast */
+.layer-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(0.8) contrast(1.1); /* Deepens the shadows for that museum look */
+}
+
+/* The Masthead - KAY'S PRODUCTION STUDIO */
+.magazine-title {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  z-index: 2; /* Sits behind subject for depth effect */
+  margin: 0;
+  font-family: "Bodoni Moda", serif;
+  font-weight: 850;
+  font-size: 38px;
+  letter-spacing: -1.5px; /* Tight tracking for luxury feel */
+  color: #CA7926; /* Your Gold */
+  text-transform: uppercase;
+}
+
+/* Subject - Overlapping the Masthead */
+.layer-subject {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 3; /* This creates the "3D" magazine effect */
+  pointer-events: none;
+}
+
+/* Captions & Headlines */
+.magazine-captions {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  padding: 0 25px;
+  z-index: 4;
+}
+
+/* The Whimsical Headline */
+.headline {
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 0.9;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.8);
+  /* text-align: center; is already inherited from parent */
+}
+
+.magazine-captions p {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px; 
+  color: #B35403; 
+  margin: 5px 0;
+  /* Ensured consistent centering for multi-line credits */
+  width: 100%;
+}
+
+/* The "Issue Info" - Technical/CS vibe */
+.production-data {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  z-index: 4;
+  writing-mode: vertical-rl; /* Professional editorial detail */
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 10px;
+  color: rgba(202, 121, 38, 0.6);
+  letter-spacing: 2px;
+}
